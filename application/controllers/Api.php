@@ -20,7 +20,7 @@ class Api extends CI_Controller {
             $this->output->set_header("Access-Control-Allow-Origin: *");
             
             $apikey = $this->input->post('apikey');
-            
+            //$apikey = '123456789';
             $table = 'food';
             
             
@@ -41,7 +41,7 @@ class Api extends CI_Controller {
                     );
                     echo "food: ",json_encode($this->datasistem->listdata($filter,$table,null,null)->result());
                     echo "status: ",json_encode($this->datasistem->listdata($filter,'status',null,null)->result());
-                     
+                    echo "expiry: ",json_encode($this->datasistem->listdata($filter,'expiry',null,null)->result()); 
                 }
             }
             else {
