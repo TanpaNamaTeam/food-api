@@ -3,10 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Datasistem extends CI_Model {
 
-  
+
 
 	function listdata($data=null,$table=null,$limit=null,$offset=null){
-					
+		
+               
 		return $this->db->get_where($table,$data,$limit,$offset);
 		
 	}

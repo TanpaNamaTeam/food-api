@@ -29,7 +29,7 @@ class Api extends CI_Controller {
                 
                 $foodid = $this->input->post('food_id');
                 
-                
+                //$foodid = 1;
                 
                 if ($foodid == null){
                     echo json_encode($this->datasistem->listdata(null,$table,null,null)->result());
@@ -39,8 +39,9 @@ class Api extends CI_Controller {
                     $filter = array (
                     'food_id' => $foodid
                     );
-                    
-                    echo json_encode($this->datasistem->listdata($filter,$table,null,null)->result());
+                    echo "food: ",json_encode($this->datasistem->listdata($filter,$table,null,null)->result());
+                    echo "status: ",json_encode($this->datasistem->listdata($filter,'status',null,null)->result());
+                     
                 }
             }
             else {
