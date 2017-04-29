@@ -7,7 +7,7 @@ class Api extends CI_Controller {
 		// Call the CI_Model constructor
 		parent::__construct();
 		
-                $theapikey = '123456789';
+                
 	}
         
 	public function index()
@@ -16,18 +16,32 @@ class Api extends CI_Controller {
 	}
         public function get_food(){
             
+            $theapikey = '123456789';
             $this->output->set_header("Access-Control-Allow-Origin: *");
             
             $apikey = $this->input->post('apikey');
             
             $table = 'food';
             
-            $filter = array (
-              'food_id' => 1  
-            );
+            
             
             if ( $apikey = $theapikey) {
-                echo json_encode($this->datasistem->listdata($filter,$table,null,null)->row());
+                
+                $foodid = $this->input->post('food_id');
+                
+                
+                
+                if ($foodid == null){
+                    echo json_encode($this->datasistem->listdata(null,$table,null,null)->result());
+                }
+                else{
+                    
+                    $filter = array (
+                    'food_id' => $foodid
+                    );
+                    
+                    echo json_encode($this->datasistem->listdata($filter,$table,null,null)->result());
+                }
             }
             else {
                 echo "wrong API KEY";    
@@ -35,6 +49,7 @@ class Api extends CI_Controller {
         }
         public function  save_food(){
             
+            $theapikey = '123456789';
             $this->output->set_header("Access-Control-Allow-Origin: *");
             
             $apikey = $this->input->post('apikey');
