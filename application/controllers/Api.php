@@ -25,7 +25,7 @@ class Api extends CI_Controller {
             
             
             
-            if ( $apikey = $theapikey) {
+            if ( $apikey == $theapikey) {
                 
                 $foodid = $this->input->post('food_id');
                 
@@ -59,7 +59,7 @@ class Api extends CI_Controller {
 	    
             $table = 'food';            
             
-            if ( $apikey = $theapikey) {
+            if ( $apikey == $theapikey) {
             
             $this->datasistem->save($data,$table);
 	
@@ -85,7 +85,7 @@ class Api extends CI_Controller {
             
             $theapikey = '123456789';
             
-            if ( $apikey = $theapikey) {
+            if ( $apikey == $theapikey) {
                 echo $this->datasistem->search($this->input->post('search'))->result();
             }
             else {
