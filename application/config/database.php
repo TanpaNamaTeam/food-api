@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'hostname' => 'foodbuddy.cbb7juozaly8.us-east-1.rds.amazonaws.com',
+	'username' => 'buddyname',
+	'password' => 'buddypass',
+	'database' => 'foodbuddy',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
