@@ -1,18 +1,20 @@
 ##################
-API FOR FOOD NASA APPSCHALANGE 
+API SERVER FOR FOOD NASA APPSCHALANGE 
 ###################
 
-API for food
+API for food 
 
 *******************
 Release Information
 *******************
-
+the api build for nasa appchalange 2017 . 
 
 **************************
 Changelog and New Features
 **************************
-
+1. add api/get_food  for get food information
+2. add api/save_food for save data from apps
+3. add api/search_food for search food 
 
 *******************
 Server Requirements
