@@ -11,7 +11,12 @@ class Datasistem extends CI_Model {
 		return $this->db->get_where($table,$data,$limit,$offset);
 		
 	}
-
+        function search($cari){
+            
+            $this->db->like('name',$cari);
+            $this->db->get('food');
+            
+        }
 	function save($data=null,$table=null){
 			
 		$this->db->insert($table,$data);

@@ -79,4 +79,17 @@ class Api extends CI_Controller {
             }
             
         }
+        public function search_food(){
+            
+            $this->output->set_header("Access-Control-Allow-Origin: *");
+            
+            $theapikey = '123456789';
+            
+            if ( $apikey = $theapikey) {
+                echo $this->datasistem->search($this->input->post('search'))->result();
+            }
+            else {
+                echo "wrong API KEY";    
+            }
+        }
 }
