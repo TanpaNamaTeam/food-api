@@ -73,7 +73,7 @@ class Api extends CI_Controller {
             //} 
      
                 
-            $this->datasistem->save($data,$table);
+            echo $this->datasistem->save($data,$table);
 	
 	      	 $response = array(
 	         'Success' => true,
