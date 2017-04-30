@@ -41,7 +41,8 @@ class Api extends CI_Controller {
                     );
                     echo "food: ",json_encode($this->datasistem->listdata($filter,$table,null,null)->result());
                     echo "status: ",json_encode($this->datasistem->listdata($filter,'status',null,null)->result());
-                    echo "expiry: ",json_encode($this->datasistem->listdata($filter,'expiry',null,null)->result()); 
+                    echo "expiry: ",json_encode($this->datasistem->listdata($filter,'expiry',null,null)->result());
+                    echo "staleness",json_encode($this->datasistem->listdata($filter,'staleness',null,null)->result());
                 }
             //}
             //else {
