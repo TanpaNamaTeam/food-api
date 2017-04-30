@@ -68,9 +68,9 @@ class Api extends CI_Controller {
             $file_name = sha1($_FILES['file']['image']);
             $uploadfile = $uploaddir.$file_name;
 
-            if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
-                $data['image'] = $file_name;
-            } 
+            //if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
+                //$data['image'] = $file_name;
+            //} 
      
                 
             $this->datasistem->save($data,$table);
