@@ -32,7 +32,9 @@ class Api extends CI_Controller {
                 //$foodid = 1;
                 
                 if ($foodid == null){
-                    echo json_encode($this->datasistem->listdata(null,$table,null,null)->result());
+                    echo "food: ",echo json_encode($this->datasistem->listdata(null,$table,null,null)->result());
+                    echo "staleness",json_encode($this->datasistem->listdata($filter,'staleness',null,null)->result());
+
                 }
                 else{
                     
