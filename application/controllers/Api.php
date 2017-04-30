@@ -63,7 +63,7 @@ class Api extends CI_Controller {
             //if ( $apikey == $theapikey) {
             
             $uploaddir = './uploads/';
-            $file_name = sha1($_FILES['file']['name'].date());
+            $file_name = sha1($_FILES['file']['name']);
             $uploadfile = $uploaddir.$file_name;
 
             if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
